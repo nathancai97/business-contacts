@@ -1,0 +1,14 @@
+version: '3.8'  # Use the desired version of Docker Compose
+
+services:
+  server:  # Service for the server application
+    build:
+      context: ./server  # Path to the root directory of the server application
+    ports:
+      - "5000:5000"  # Map port 5000 on the host to port 5000 in the container
+
+  client:  # Service for the client application
+    build:
+      context: ./client  # Path to the root directory of the client application
+    ports:
+      - "3000:3000"  # Map port 3000 on the host to port 3000 in the container
